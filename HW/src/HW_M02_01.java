@@ -5,16 +5,16 @@ public class HW_M02_01 {
 //        long from = 0;
 //        long to = 50000;
 
-        int startOfRange = 0;
-        int i = startOfRange;
-        int endOfRange = 13;
+        long startOfRange = 0;
+        long i = startOfRange;
+        long endOfRange = 13;
 
         String printPrimeNumbers = "";
-        int number = 0;
+        long number = 0;
 
         for (i = 1; i <= endOfRange; i++) {
-            int counter = 0;
-            for (number = i; number >= 1; number--) {
+            long counter = 0;
+            for (number = i; number >= 1; number++) {
                 if (i % number == 0) {
                     counter = counter + 1;
                 }

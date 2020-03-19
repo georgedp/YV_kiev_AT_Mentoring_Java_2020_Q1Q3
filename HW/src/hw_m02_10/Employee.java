@@ -1,52 +1,34 @@
-package hw_m02_10;
+package hw_m02_09;
+import java.util.Random;
 
-public abstract class Employee {
-    private String firstName;
-    private String lastName;
+public class Employee {
     private int id;
+    private String name;
+    private String surname;
 
-    public Employee(String first, String last, int id) {
-        firstName = first;
-        lastName = last;
+    public Employee(String name, String surname) {
+        this.id = new Random().nextInt();
+        this.name = name;
+        this.surname = surname;
+    }
+
+    public Employee() {
+        this.id = new Random().nextInt();
+    }
+
+    public void print() {
+        System.out.println(id + " " + name + " " + surname);
+    }
+
+    public void setID(int id) {
         this.id = id;
     }
 
-    public static double print(String first, String last, int id) {
-        System.out.println("Name: " + Employee.setFirstName(first));
-        System.out.println("surname : " + Employee.setLastName(last));
-        System.out.println("id : " + Employee.setId(id));
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public void setFirstName(String first) {
-        firstName = first;
+    public void setSurname(String surname) {
+        this.surname = surname;
     }
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setLastName(String last) {
-        lastName = last;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getSocialSecurityNumber() {
-        return this.id;
-    }
-
-    @Override
-    public String toString() {
-        return String.format("%s %s\nsocial security number: %s",
-                getFirstName(), getLastName(), getSocialSecurityNumber());
-    }
-
-    // abstract method overridden by concrete subclasses
-    public abstract double earnings(); // no implementation here
-} // end abstract class Employee
+}

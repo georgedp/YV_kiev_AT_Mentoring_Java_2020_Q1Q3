@@ -13,7 +13,7 @@ public class HW_M02_02 {
         double discriminant = b * b - 4 * a * c;
 
         if (discriminant == 0 ) {
-            x1 = (-b + Math.sqrt(b * b - 4 * a * c)) / (2 * a);
+            x1 = (-b + Math.sqrt(discriminant)) / (2 * a);
             System.out.println( "There is only one root: " + x1);
         } else if (discriminant < 0){
             System.out.println( "There is no solution – discriminant is a negative number");

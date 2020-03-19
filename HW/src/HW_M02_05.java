@@ -12,9 +12,8 @@ public class HW_M02_05 {
         int x = input.nextInt();
 
         int[] arr = {158, 207, 392, 62, 315, 434, 487, 268, 405, 241};
-        int n = arr.length;
 
-        int index = searchArrIndex(arr, n, x);
+        int index = searchArrIndex(arr, x);
         if (index == -1) {
             System.out.println("Element is not present in the array");
         } else {
@@ -22,8 +21,9 @@ public class HW_M02_05 {
         }
     }
 
-    static int searchArrIndex(int arr[], int n, int x) {
-        for (int i = 0; i < n; i++) {
+    static int searchArrIndex(int arr[], int x) {
+
+        for (int i = 0; i < arr.length; i++) {
             // Return the index of the element if the element
             // is found
             if (arr[i] == x)
